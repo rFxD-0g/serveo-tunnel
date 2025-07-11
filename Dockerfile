@@ -10,7 +10,7 @@ RUN ssh-keyscan serveo.net >> /etc/ssh/ssh_known_hosts
 EXPOSE 8888
 
 # Shell form: todo en una sola línea. Así no rompe el parser de Dockerfile.
-CMD ssh -N \
+CMD ssh -vvv -N \
     -o StrictHostKeyChecking=no \
     -o ServerAliveInterval=60 \
     -o ServerAliveCountMax=3 \
