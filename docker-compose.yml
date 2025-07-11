@@ -1,7 +1,6 @@
-cat <<EOF > docker-compose.yml
 version: '3.7'
+
 services:
   serveo-tunnel:
     build: .
     restart: unless-stopped
-EOF
